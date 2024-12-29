@@ -9,7 +9,7 @@ import './scss/style.scss'
 import './scss/examples.scss'
 
 // Containers
-const DefaultLayout = React.lazy(() => import('./layout/DefaultLayout'))
+const AdminLayout = React.lazy(() => import('./layout/AdminLayout'))
 
 // Pages
 const Login = React.lazy(() => import('./views/pages/login/Login'))
@@ -49,7 +49,7 @@ const App = () => {
           <Route exact path="/register" name="Register Page" element={<Register />} />
           <Route exact path="/404" name="Page 404" element={<Page404 />} />
           <Route exact path="/500" name="Page 500" element={<Page500 />} />
-          <Route path="/admin/*" name="Home" element={<DefaultLayout />} />
+          <Route path="/admin/*" name="Home" element={<AdminLayout />} />
           <Route path="/" element={<Navigate to="/admin/dashboard" replace />} />
         </Routes>
       </Suspense>
